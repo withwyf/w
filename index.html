@@ -119,7 +119,7 @@
 </head>
 
 <body>
-  <audio src="http://music.163.com/song/media/outer/url?id=3801865.mp3" autoplay="true"></audio>
+  <audio id="audio" src="http://music.163.com/song/media/outer/url?id=3801865.mp3" autoplay="true"></audio>
   <div id="fullpage">
     <div class="section page1">
       <div class="bg">
@@ -147,6 +147,10 @@
   </div>
   <script>
     $(document).ready(function () {
+      debugger
+      $('#audio')[0].load();
+      $('#audio')[0].play();
+
       $('#fullpage').fullpage({
         //options here
         autoScrolling: true,
